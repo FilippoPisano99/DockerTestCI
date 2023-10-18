@@ -18,4 +18,4 @@ jobs:
     - name: Print local DIR...
       run: ls
     - name: Run Docker image
-      run: docker run -p 8080:8080 my-image-name
+      run: docker run -p 8080:8080 my-image-name:$(date +%s)
