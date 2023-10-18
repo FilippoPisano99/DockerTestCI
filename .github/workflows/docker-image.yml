@@ -12,6 +12,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Run NODEJS
+      run: npm install
+    - name: Run NODEJS
       run: node index.js
     
     #- name: Build the Docker image
