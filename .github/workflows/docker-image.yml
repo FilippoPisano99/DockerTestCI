@@ -11,11 +11,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
-    - name: Print PWD...
-      run: pwd
-    - name: Print local DIR...
-      run: ls
-    - name: Run Docker image
-      run: docker run -p 8080:8080 my-image-name:$(date +%s)
+    - name: Run NODEJS
+      run: node index.js
+    
+    #- name: Build the Docker image
+    #  run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+    #- name: Print PWD...
+    #  run: pwd
+    #- name: Print local DIR...
+    #  run: ls
+    #- name: Run Docker image
+    #  run: docker run -p 8080:8080 my-image-name:$(date +%s)
